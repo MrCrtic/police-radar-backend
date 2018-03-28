@@ -33,8 +33,8 @@ class RadarController extends Controller
    public function filterRadars(){
     $radar = Radar::get();
     $time = Carbon::now();
-    $time2 = new Carbon('2017-12-15 18:27:54');
-    //dd($time->diffInMinutes($time2));
+    
+    
     foreach($radar as $r){
       $total = $time->diffInMinutes($r->created_at);
     if($total>19){
